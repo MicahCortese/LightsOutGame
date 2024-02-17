@@ -108,13 +108,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void startActivity(Intent intent) {
-    }
-
     public void onChangeColorClick(View view) {
         // Send the current color ID to ColorActivity
         Intent intent = new Intent(this, ColorActivity.class);
-        Intent.putExtra(ColorActivity.EXTRA_COLOR, mLightOnColorId);
+        intent.putExtra(ColorActivity.EXTRA_COLOR, mLightOnColorId);
         mColorResultLauncher.launch(intent);
     }
 
